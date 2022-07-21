@@ -1,0 +1,19 @@
+{
+  "name": "assets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicoJoub/assets.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicoJoub/assets/issues"
+  },
+  "homepage": "https://github.com/NicoJoub/assets#readme"
+}

@@ -1,6 +1,5 @@
 @charset "UTF-8";
 /*start general code*/
-/*color*/
 body {
   margin: 0;
   box-sizing: border-box;
@@ -41,7 +40,6 @@ h2 {
 }
 
 /*end general code*/
-/*pourquoi le header a une marge en haut ?*/
 /*start header*/
 .header { /*obligation de mettre une classe sur le header pour sass?*/
   display: flex;
@@ -67,7 +65,7 @@ h2 {
   padding-right: 15px;
 }
 
-/*Re ecrire le code d une autre manière pour sass sur cette partie?*/
+/*Re ecrire le code d une autre manière pour sass ?*/
 /*end section locationr*/
 /*start section explanation*/
 .explanation-section {
@@ -75,15 +73,18 @@ h2 {
   padding-top: 40px;
   padding-bottom: 60px;
 }
-.explanation-section__heading {
+
+.explanation__heading {
   margin-top: 0;
 }
-.explanation-section__text {
+
+.explanation__text {
   margin-bottom: 30px;
   font-weight: 300;
   font-size: large;
 }
-.explanation-section__button {
+
+.explanation__button {
   display: inline-block;
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   color: white;
@@ -92,39 +93,25 @@ h2 {
   box-shadow: 0px 5px 10px 0 rgb(201, 198, 198);
   transition: opacity 1s;
 }
-.explanation-section__button :hover {
-  opacity: 0.3;
+
+.explanation__button:hover {
+  opacity: 0.5;
 }
 
+/*faire le hoover*/
 /*end section explanation*/
 /*start section steps*/
 .steps-section {
   padding-top: 20px;
   padding-bottom: 60px;
 }
-.steps-section__list {
+
+.steps__list {
   display: flex;
   flex-direction: column;
 }
-.steps-section__number {
-  background-color: #9356DC;
-  color: white;
-  border-radius: 50%;
-  width: 25px;
-  height: 25px;
-  text-align: center;
-  line-height: 25px;
-  margin-left: -10px;
-}
-.steps-section__icon {
-  margin-left: 20px;
-  margin-right: 20px;
-  color: #7d7c7e;
-}
-.steps-section__text {
-  font-weight: 700;
-}
-.steps-section__button {
+
+.steps__button {
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
@@ -135,19 +122,45 @@ h2 {
   margin-bottom: 30px;
   transition: background-color 0.5s ease-in-out;
 }
-.steps-section__button:hover {
+
+.steps__button:hover {
   background-color: #f5edff;
 }
-.steps-section__button:hover:hover i {
+
+.steps__button:hover i {
   color: #9356dc;
 }
 
-/*end section steps*/
+.steps__number {
+  background-color: #9356DC;
+  color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  margin-left: -10px;
+}
+
+.steps__icon {
+  margin-left: 20px;
+  margin-right: 20px;
+  color: #7d7c7e;
+}
+
+
+
+.steps__text {
+  font-weight: 700;
+}
+
+/*start section steps*/
 /*start section Restaurant*/
 .restaurant-section {
   padding: 30px;
 }
-.restaurant-section__card {
+
+.restaurant__card {
   display: flex;
   flex-direction: column;
   border-radius: 20px;
@@ -156,13 +169,15 @@ h2 {
   position: relative;
   margin-bottom: 15px;
 }
-.restaurant-section__card--images {
+
+.restaurant__card--images {
   border-radius: 15px 15px 0 0;
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-.restaurant-section__statut--green {
+
+.restaurant__statut--green {
   position: absolute;
   right: 20px;
   top: 15px;
@@ -172,21 +187,24 @@ h2 {
   font-weight: bold;
   width: 80px;
   text-align: center;
-  border-radius: 10%;
 }
-.restaurant-section__card__body {
+
+.restaurant__card__body {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 20px;
 }
-.restaurant-section__card__name, .restaurant-section__card__location {
+
+.restaurant__card__name, .restaurant__card__location {
   margin: 0;
 }
-.restaurant-section__card__name {
+
+.restaurant__card__name {
   margin-bottom: 5px;
 }
-.restaurant-section__button--like {
+
+.restaurant__button--like {
   border: none;
   background: none;
   font-size: 25px;
@@ -194,27 +212,30 @@ h2 {
 
 /*end section Restaurant*/
 /*start footer*/
-.footer {
+footer {
   background-color: #353535;
   padding-top: 15px;
   padding-bottom: 15px;
-}
-.footer__link, .footer__icon {
-  color: white;
-}
-.footer__icon {
-  width: 22px;
-}
-.footer__logo {
-  height: auto;
-  width: 100px;
-  object-fit: cover;
-  padding-top: 20px;
 }
 
 ul {
   list-style: none;
   padding-left: 0px;
+}
+
+.footer_lien, .footer_icone {
+  color: white;
+}
+
+.footer_icone {
+  width: 22px;
+}
+
+.footer__logo {
+  height: auto;
+  width: 100px;
+  object-fit: cover;
+  padding-top: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
