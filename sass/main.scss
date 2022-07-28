@@ -1,243 +1,29 @@
-/*start general code*/
+/*base*/
+@use './base/base';
+@use './base/typography';
 
-/*color*/
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
+/*components*/
+@use './components/buttons';
+@use './components/heart';
 
-body {
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-    }
-  
-  a {
-    text-decoration: none;
-    color: black;
-  }
-  
-  li {
-    list-style-type: none;
-  }
-  
-  body, html {
-    font-family: "Roboto", sans-serif;
-  }
-  .section-global {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  
-  .section--grey {
-    background-color: #f6f6f6;
-  }
-  
-  h1 {
-    font-weight: 900
-  }
-  
-  h2 {
-    font-size: 18px;
-  }
-  
-  /*end general code*/
-  /*pourquoi le header a une marge en haut ?*/ 
-  /*start header*/
-  .header { /*obligation de mettre une classe sur le header pour sass?*/
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-    box-shadow: 0 10px 0px rgb(147, 146, 146);
-        &__logo {
-            height: 30px;
-        }
-  }  
-  /*end header*/
-  
-  /*start section location*/
-  .location__search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #eaeaea;
-    margin-top: 2px;
-  }
-  
-  .fa-location-dot {
-    padding-right: 15px;
-  }
-  /*Re ecrire le code d une autre manière pour sass sur cette partie?*/ 
+/*layout*/
+@use './layout/footer';
+@use './layout/header';
 
-  /*end section locationr*/
-  
-  /*start section explanation*/
-  .explanation-section {
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 60px;
+/*pages*/
+@use './pages/loader';
+@use './pages/index';
+@use './pages/restaurants';
 
-        &__heading {
-            margin-top: 0;
-        }
 
-        &__text {
-            margin-bottom: 30px;
-            font-weight: 300;
-            font-size: large;
-        }
 
-        &__button {
-            display: inline-block;
-        background: linear-gradient(to top left, $primary, $secondary);
-        color: white;
-        border-radius: 30px;
-        padding: 15px 24px;
-        box-shadow: 0px 5px 10px 0 rgb(201, 198, 198);
-        transition: opacity 1s;
-            :hover {
-                opacity: 0.3;
-            }
-        }
-  }  
-  /*end section explanation*/
-  
-  /*start section steps*/
-  .steps-section {
-    padding-top: 20px;
-    padding-bottom: 60px;
+/*utils*/
+@use './utils/animation';
+@use './utils/functions';
+@use './utils/mixins';
+@use './utils/placeholders';
+@use './utils/variables';
 
-        &__list {
-            display: flex;
-            flex-direction: column;
-        }   
+/*themes*/
 
-          &__number {
-            background-color: $primary;
-            color: white;
-            border-radius: 50%;
-            width: 25px;
-            height: 25px;
-            text-align: center;
-            line-height: 25px;
-            margin-left: -10px;
-          }
-
-          &__icon {
-            margin-left: 20px;
-            margin-right: 20px;
-            color: #7d7c7e;
-          }
-
-          &__text {
-            font-weight: 700;
-          }
-    
-          
-          &__button {
-            display: flex;
-            align-items: center;
-            background-color: #f6f6f6;
-            padding: 15px 0;
-            border-radius: 15px;
-            margin-left: 15px;
-            box-shadow: 0px 5px 5px 0 rgb(201, 198, 198);
-            margin-bottom: 30px;
-            transition: background-color 0.5s ease-in-out;
-                &:hover {
-                    background-color: #f5edff;
-                        &:hover i {
-                            color: #9356dc;
-                        }
-                }
-          }
-  }
-    
-  /*end section steps*/
-  
-  /*start section Restaurant*/
-  .restaurant-section {
-    padding: 30px;
-
-        &__card {
-            display: flex;
-            flex-direction: column;
-            border-radius: 20px; 
-            background-color: white;
-            height: auto;
-            position: relative;
-            margin-bottom: 15px;
-          }
-
-          &__card--images {
-            border-radius: 15px 15px 0 0;    
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-          }
-
-          &__statut--green {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            background-color: $tertiary;
-            color: #008766;
-            padding: 5px;
-            font-weight: bold;
-            width: 80px;
-            text-align: center;
-            border-radius: 10%;
-          }
-
-          &__card__body {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 20px;
-          }
-
-          &__card__name, &__card__location {
-            margin: 0;
-          }
-
-          &__card__name {
-            margin-bottom: 5px;
-          }
-
-          &__button--like {
-            border: none;
-            background: none;
-            font-size: 25px;
-          }
-  }
- 
-  /*end section Restaurant*/
-  
-  /*start footer*/
-  .footer {
-    background-color: #353535;
-    padding-top: 15px;
-    padding-bottom: 15px;
-
-        &__link, &__icon {
-            color: white;
-        }
-
-        &__icon {
-            width: 22px;
-        }
-
-        &__logo {
-            height: auto;
-            width: 100px;
-            object-fit: cover;
-            padding-top: 20px;
-          }
-  }
-  
-  ul {
-    list-style: none;
-    padding-left: 0px;
-  }
+/*vendors*/

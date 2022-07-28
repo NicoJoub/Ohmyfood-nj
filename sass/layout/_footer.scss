@@ -1,0 +1,20 @@
+.footer {
+    background-color: #353535;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+        &__link, &__icon {
+            color: white;
+        }
+
+        &__icon {
+            width: 22px;
+        }
+
+        &__logo {
+            height: auto;
+            width: 100px;
+            object-fit: cover;
+            padding-top: 20px;
+          }
+  }

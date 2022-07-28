@@ -1,0 +1,146 @@
+$primary: #9356DC;
+$secondary: #FF79DA;
+$tertiary: #99E2D0;
+
+main {
+  top: 60px;
+  position: relative;
+}
+
+/*faire une mixin sur les couleurs ?*/
+.location__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eaeaea;
+  }
+  
+  .fa-location-dot {
+    padding-right: 15px;
+  }
+  
+.explanation-section {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 60px;
+
+        &__heading {
+            margin-top: 0;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+            font-weight: 300;
+            font-size: large;
+        }
+  }  
+
+
+
+.steps-section {
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+        }   
+
+          &__number {
+            background-color: $primary;
+            color: white;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            margin-left: -10px;
+          }
+
+          &__icon {
+            margin-left: 20px;
+            margin-right: 20px;
+            color: #7d7c7e;
+          }
+
+          &__text {
+            font-weight: 700;
+          }
+    
+          
+          &__button {
+            display: flex;
+            align-items: center;
+            background-color: #f6f6f6;
+            padding: 15px 0;
+            border-radius: 15px;
+            margin-left: 15px;
+            box-shadow: 0px 5px 5px 0 rgb(201, 198, 198);
+            margin-bottom: 30px;
+            transition: background-color 0.5s ease-in-out;
+                &:hover {
+                    background-color: #f5edff;
+                        &:hover i {
+                            color: #9356dc;
+                        }
+                }
+          }
+  }
+
+
+
+
+.restaurant-section {
+    padding: 30px;
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            border-radius: 20px; 
+            background-color: white;
+            height: auto;
+            position: relative;
+            margin-bottom: 15px;
+          }
+
+          &__card--images {
+            border-radius: 15px 15px 0 0;    
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+
+          &__statut--green {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            background-color: $tertiary;
+            color: #008766;
+            padding: 5px;
+            font-weight: bold;
+            width: 80px;
+            text-align: center;
+            border-radius: 6%;
+          }
+
+          &__card__body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+          }
+
+          &__card__name, &__card__location {
+            margin: 0;
+          }
+
+          &__card__name {
+            margin-bottom: 5px;
+          }
+
+          &__button--like {
+            border: none;
+            background: none;
+            font-size: 25px;
+          }
+  }
